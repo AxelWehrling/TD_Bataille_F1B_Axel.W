@@ -1,0 +1,113 @@
+Bataille navale:
+
+Réaliser l'algo et le pascal du jeu 'La bataille navale' vous utiliserais pour représenter la grille du jeu un type 'enregistrement' nommé 'case' afin 
+de décrire les cases occupées par les bateaux. De même un bateau sera décrit par un ensemble de case et la flote de bateau à coulé sera représentée par 
+un ensemble de bateau 
+
+Travail à faire:
+
+1.Ecrire un type d'enregistrement 'case' composé de deux champs (ligne et colonne de type entier).
+
+2.Ecrire un type d'enregistrement 'bateau' composé d'un ensemble de n 'case'.
+
+3.Ecrire la structure 'flote' composé d'un ensemble de 'bateau'.
+
+4.Ecrire une fonction de création d'un 'case', elle prend en paramètre la ligne et la colonne associées à la 'case'.
+
+5.Ecrire une fonction de comparaison de deux 'case' cette fonction renvera vrai ou faux selon le cas.
+
+6.Ecrire une fonction de création de 'bateau', elle renverra un type d'enregistrement 'bateau' correctement rempli.
+
+7.Ecrire une fonction qui verifie qu'une 'case' appartient à un 'bateau' cette fonction reverra 1 ou 0. Attention cette fonction de vérification devra 
+utilisé la fonction de vérification de 'case' (la 5ème).
+
+8.Ecrire une fonction qui vérifie qu'une 'case' appartient à une 'flote' de bateau, cette fonction devra utilisé la fonction de vérification pour un 
+'bateau' (La 8ème).
+
+
+Algorithme: La bataille naval.
+
+//BUT: Créer un algorithme qui crée un jeu de société.
+//ENTREE: Un nom, des coordonnée, des bateaux.
+//SORTIE: Si on a touché ou loupé le tire.
+
+Const	
+	max=10
+
+Type 
+
+	cellule=ENREGISTREMENT
+
+		ligne,colonne:entier
+	
+	FINENREGISTREMENT
+	
+	Tabcell=Tableau[1..max] de cellule
+	
+	bateau=ENREGISTREMENT
+	
+		Tabbateau:Tabcell
+	
+	FINENREGISTREMENT
+	
+	flotte=ENREGISTREMENT
+	
+		Tabflotte:Tableau[1..max] de bateau
+		
+	FINENREGISTREMENT
+		
+	
+procedure Creationtab (Var: Position:Tabcell)
+
+var
+	i,j:entier
+	
+debut
+	POUR i DE 1 A max FAIRE
+		POUR j DE 1 A max FAIRE
+		Position[i].ligne<--i
+		Position[j].colonne<--j
+		Gotoxy(Position[i].ligne,Position[j].colonne)
+	FINPOUR
+	
+fin
+
+//Programme princiapal:
+
+var
+	Matrice:Tabcell
+
+DEBUT
+	Creationtab(Matrice)
+FIN.
+
+//Je n'arrive pas à comprendre l'utilisation des Multiple enregistrement
+dans cette exercice. J'ai essayé de créer un plateau de jeu sans utilisé 
+de tableau à 2 Dimension comme demandé mais celà me bloque. Je ne vois pas
+comment générer des bateaux aléatoirements dans une génération de tableau 
+pareille qui plus est sous forme de tableau. Je n'arrive pas à me représenté
+la manière donc je pourrais permettre au programme de générer des bateaux 
+avec des orientations différentes.Mais mon principal problème reste les 
+enregistrement qui sont le corps du programme et que je n'arrive pas à comprendre.
+
+	
+
+
+	
+	
+			
+		
+		
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
